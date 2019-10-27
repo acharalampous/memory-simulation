@@ -21,7 +21,7 @@ You can install the latest gcc compiler on Ubuntu based systems using:
 
 ## Getting Started
 Download Repository Locally using:
-<br /> ```$ https://github.com/AndCharalampous/memory-simulation.git ```
+<br /> ```$ git clone https://github.com/AndCharalampous/memory-simulation.git ```
 
 ## Compilation
 Compile code guiding in src directory and using the Makefile:
