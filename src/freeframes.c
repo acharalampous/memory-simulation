@@ -7,6 +7,12 @@
 //** FRAMES NODE **//
 
 FramesNode* FN_Init(int numFrame){
+    FramesNode* newNode = malloc(sizeof(FramesNode));
+    if(newNode == NULL)
+        return NULL;
+    
+    newNode->numFrame = numFrame;
+    newNode->next = NULL;
 
     return newNode;
 }
@@ -76,12 +82,7 @@ void FL_Print(FramesList* list){
     printf(" free: %d | max: %d\n",list->freeFrames,list->maxFrames);
     FramesNode* node = list->start;
     int nodeNum = 0;
-    FramesNode* newNode = malloc(sizeof(FramesNode));
-    if(newNode == NULL)
-    return NULL;
     
-    newNode->numFrame = numFrame;
-    newNode->next = NULL;
     while(node != NULL){
         printf("    +Printing node [%d]: ",nodeNum);
         FN_Print(node);
